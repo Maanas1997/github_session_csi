@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <script src="script/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $("#id1").css("background-color", "#cccccc");
+    }); 
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+
+</head>
+
+<body>
+	<div class="container">
+<div class="row">
+
+<div class="col-md-12 " style="font-family:impact;color:red;font-size:55px;text-align:center">
+	
+    <u>Book Tickets</u>
+</div>
+
+<div class="col-md-12">
+<nav class="navbar navbar-default">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+      	<li><a href="register.jsp">Register</a></li>
+		<li><a href="login.jsp">Sign Out</a></li>
+      </ul>
+    </div>
+</nav>
+
+</div>
+
+<form action="check_fair.jsp" method="post">
+&nbsp
+&nbsp
+<div class="col-md-12 ">
+<style>
+td
+{
+	font-size: 200%;
+}
+</style>	
+	<table border="2" align="center" width="800" height="600">
+		<tr>
+			<td font size="12">Enter Name</td>
+			<td>
+				<input type="text" name="t1" placeholder="Enter Name" id="id1" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Phone Number</td>
+			<td>
+				<input type="text" name="t2" placeholder="Enter Phone Number" minlength="10" maxlength="10" required/>	
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Source Station</td>
+			<td>
+				<select name="t3">
+					<option>Allahabad</option>		
+					<option>Lucknow</option>
+					<option>Varanasi</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Destination Station</td>
+			<td>
+				<select name="t4">
+					<option>Delhi</option>		
+					<option>Bengaluru</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Day of Journey</td>
+			<td>
+				<select name="t5">
+					<option>Monday</option>
+					<option>Tuesday</option>
+					<option>Wednesday</option>
+					<option>Thursday</option>
+					<option>Friday</option>
+					<option>Satday</option>
+					<option>Sunday</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Number Of Seats</td>
+			<td>
+				<input type="number" name="t6" placeholder="Enter number of seats" min="1" max="6" required />
+			<!--	<select name="t6">
+					<option>1</option>
+					<option>2</option>					
+					<option>3</option>
+					<option>4</option>			
+					<option>5</option>					
+					<option>6</option>	
+				</select>	-->					
+			</td>
+		</tr>
+		<tr>
+			<td>Select Class</td>
+			<td>
+				<select name="t7">
+					<option>AC</option>
+					<option>NON_AC</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" value="Proceed For Payment" class="btn btn-primary btn-lg"/>
+			</td>
+		</tr>	
+	</table>
+</div>
+</form>
+	</body>
+</html>
+

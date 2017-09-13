@@ -1,0 +1,99 @@
+<%@page import="java.sql.*"%>
+<! Doctype html>
+<html>
+<body>
+	<h1 align="center" color="red">Book Tickets</h1>
+	<table >
+		<tr>
+			<td>Enter Name</td>
+			<td>
+				<input type="text" name="t1" placeholder="Enter Name" />
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Phone Number</td>
+			<td>
+				<input type="text" name="t2" placeholder="Enter Phone NUmber" />	
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Source Station</td>
+			<td>
+				<select name="t3">
+					<option>Allahabad</option>		
+					<option>Lucknow</option>
+					<option>Varanasi</option>
+				</select>
+			</td>
+		<tr>
+		<tr>
+			<td>Enter Destination Station</td>
+			<td>
+				<select name="t4">
+					<option>Delhi</option>		
+					<option>Bengaluru</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Day of Journey</td>
+			<td>
+				<select name="t5">
+					<option>Monday</option>
+					<option>Tuesday</option>
+					<option>Wednesday</option>
+					<option>Thursday</option>
+					<option>Friday</option>
+					<option>Satday</option>
+					<option>Sunday</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Number Of Seats</td>
+			<td>
+				<select name="t6">
+					<option>1</option>
+					<option>2</option>					
+					<option>3</option>
+					<option>4</option>			
+					<option>5</option>					
+					<option>6</option>	
+				</select>						
+			</td>
+		</tr>
+		<tr>
+			<td>Select Class</td>
+			<td>
+				<select name="t7">
+					<option>AC</option>
+					<option>NON-AC</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" name="b1" value="Confirm"/>
+			</td>
+		</tr>	
+
+<%
+	String name=request.getParameter("t1");
+	String phn_num=request.getParameter("t2");
+	String src=request.getParameter("t3");
+	String des=request.getParameter("t4");
+	String doj=request.getParameter("t5");
+	int seat=Integer.parseInt(request.getParameter("t6"));
+	String cls=request.getParameter("t7");
+	out.println(name+"<br>");
+	out.println(phn_num+"<br>");
+	out.println(src+"<br>");
+	out.println(des+"<br>");
+	out.println(doj+"<br>");
+	out.println(seat+"<br>");
+	out.println(cls+"<br>");
+%>
+	</body>
+</html>
+
